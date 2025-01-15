@@ -53,21 +53,23 @@ for i in l:
 
 ## 你和你比较熟悉的同学(bfs)
 
-`d,ans={-1:set()},[]`
-`for _ in range(int(input())):`
-    `l=input().split()`
-    `d[int(l[0])]=set([int(i) for i in l[2:]])   
-def bfs(i):`
-    `queue,visited=[i],{i}`
-    `while queue:`
-        `node=queue.pop(0)`
-        `visited.add(node)`
-        `queue=queue+list(d.get(node,set())-visited)`
-    `if len(d.get(node,set())-visited)==0:`
-        `ans.append(len(visited-{-1}))`
-`for i in d.keys():`
-    `bfs(i)`
-`print(max(ans))`
+```
+d,ans={-1:set()},[]
+for _ in range(int(input())):
+    l=input().split()
+    d[int(l[0])]=set([int(i) for i in l[2:]])   
+def bfs(i):
+    queue,visited=[i],{i}
+    while queue:
+        node=queue.pop(0)
+        visited.add(node)
+        queue=queue+list(d.get(node,set())-visited)
+    if len(d.get(node,set())-visited)==0:
+        ans.append(len(visited-{-1}))
+for i in d.keys():
+    bfs(i)
+print(max(ans))
+```
 
 
 
@@ -76,8 +78,8 @@ def bfs(i):`
 
 
 ## 计算鞍点 matrix
-
-`a = [[int(x) for x in input().split()] for _ in range(5)]
+```
+a = [[int(x) for x in input().split()] for _ in range(5)]
 for i in range(5):
     maximum = a[i][0]
     maxindex = 0
@@ -92,7 +94,8 @@ for i in range(5):
         print(i+1, maxindex+1, maximum)
         break
 else:
-    print('not found')`
+    print('not found')
+```
 
 
 
@@ -100,9 +103,7 @@ else:
 
 
 
-# 계산개론 기말고사 요약
 
-2024.12.26: 시험 전 효율적인 복습 방법을 찾음. Bilibili에서 “左程云”을 검색하면 이 업로더가 알고리즘을 매우 풍부하게 업데이트해두었으니, 스스로 부족한 부분을 골라 빠르게 대량으로 문제풀이를 진행할 수 있음
 
 ------
 
@@ -684,8 +685,4 @@ print(datetime.datetime(2023, 10, 5).weekday()) # 목요일(3) 반환
 ```
 
 ------
-
-### Manacher (회문)
-
-문자열에서 가장 긴 부분 회문을 O(n)에 구할 수 있는 알고리즘
 
