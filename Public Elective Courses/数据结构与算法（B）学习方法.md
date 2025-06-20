@@ -1,6 +1,7 @@
 数据结构与算法（B）学习方法
 
-![Uploading Mind Map.png…]()
+
+![Mind Map](https://github.com/user-attachments/assets/aaee1b49-3ae4-4c94-b72d-b73f2b8317f3)
 
 
 在准备笔试考试时，我通常运用思维导图进行系统化的学习，从整体框架入手，再逐步分解至每个单元的具体知识点，通过这种自上而下（top-down）的方式，使我能够更加清晰且全面地掌握所学的内容结构。而在准备机考时，我则主要利用Leetcode top100题库，针对自身知识掌握不足的部分，有重点、有计划地进行了集中式的强化练习。
